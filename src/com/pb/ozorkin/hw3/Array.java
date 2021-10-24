@@ -12,10 +12,10 @@ public class Array {
         for (int i = 0; i < 10; i++) {
             array[i] = scanner.nextInt();
         }
-        for (int y : array) {
+        for (int y : array) { if (y>0)
             x = x + y;
         }
-        System.out.println("сумма всех элементов массива: " + x);
+        System.out.println("сумма всех положительных элементов массива: " + x);
 
         boolean isSorted = false;
         int z;

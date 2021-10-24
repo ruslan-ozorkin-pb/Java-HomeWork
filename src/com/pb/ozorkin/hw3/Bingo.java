@@ -15,28 +15,29 @@ public class Bingo {
         while (true) {
             attempt++;
             int y = scanner.nextInt();
-            if (y == 1111) {break;}
-            if (y > x) {
-                System.out.println("Загаданое число меньше введеного");
-            } else if (y < x) {
-                System.out.println("Загаданое число больше введеного");
-            } else if (y !=x) {continue;}
-            else if (y == x) {
-                System.out.println("Bingo " + "Вы угадали с " + attempt + "-й " + " попытки");
+            if (y == 1111) {
                 break;
             }
+            if (y > 100 || y < 0) {
+                System.out.println("Введите число в диапазоне от 0 до 100");
+            } else if (y > x) {
+                    System.out.println("Загаданое число меньше введеного");
+                } else if (y < x) {
+                    System.out.println("Загаданое число больше введеного");
+                } else if (y != x) {
+                    continue;
+                } else if (y == x) {
+                    System.out.println("Bingo " + "Вы угадали с " + attempt + "-й " + " попытки");
+                    break;
+                }
 
+            }
+            System.out.println("До скорой встречи!");
         }
-        System.out.println("До скорой встречи!");
-    }
-
-
-
-
-
 
 
     }
+
 
 
 
