@@ -31,22 +31,21 @@ public class Book {
     }
 
     public void takeBook(Book... book) {
-        System.out.println("[ проводим інвентаризацію:  ");
-        for (Book autors : book) {
+             for (Book autors : book) {
             System.out.print(autors + ",");
         }
-        System.out.println(" ]");
+
     }
     public void takeBook(String names, int n) {
-        System.out.println("[ " + names + " взял " + n + " книг ]");
+        System.out.println(names + " взял " + n + " книги ");
     }
 
     public void takeBook(String names, String... author) {
-        System.out.print("[ " + names + " взял книги: ");
+        System.out.print(names + " взял книги: ");
         for (String autors : author) {
             System.out.print(autors + ", ");
         }
-        System.out.println(" ]");
+        System.out.println();
 
     }
     public String getAuthor() {
@@ -68,18 +67,18 @@ public class Book {
               for (Book autors : book) {
             System.out.print(autors + ",");
         }
-        System.out.println(" ]");
+
     }
     public void returnBook(String names, int n) {
-        System.out.println("[ " + names + " вернул " + n + " книг ]");
+        System.out.println(names + " вернул " + n + " книги");
     }
 
     public void returnBook(String names, String... author) {
-        System.out.print("[ " + names + " вернул книги: ");
+        System.out.print(names + " вернул книги: ");
         for (String autors : author) {
             System.out.print(autors + ", ");
         }
-        System.out.println(" ]");
+        System.out.println();
 
     }
 
