@@ -7,6 +7,20 @@ public class Reader {
    private int birthsday;
    private int phone;
 
+ public Reader() {
+
+ }
+    public Reader(String fio, int nomer, String department, int birthsday, int phone) {
+         this.fio=fio;
+        this.nomer = nomer;
+        this.department = department;
+        this.birthsday = birthsday;
+        this.phone = phone;
+    }
+    public String getInfo() {
+    String info = " " + getFio() + " " +  getNomer() + " " +  getDepartment() + " " +  getBirthsday() + " " +  getPhone();
+    return info;
+    }
 
 
    public void  setFio(String fio) {
