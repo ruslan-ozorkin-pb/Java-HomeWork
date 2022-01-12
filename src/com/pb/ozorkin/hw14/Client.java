@@ -1,6 +1,7 @@
 package com.pb.ozorkin.hw14;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.*;
 import java.net.Socket;
 import java.text.SimpleDateFormat;
@@ -17,6 +18,7 @@ class ClientConnection {
     private String nickname;
     private String dtime;
     private SimpleDateFormat dt1;
+
 
     public ClientConnection(String addr, int port) {
         this.addr = addr;
@@ -118,10 +120,17 @@ public class Client extends JFrame {
 
 
 
+
+
     public static void main(String[] args) {
-        new ClientConnection(ipAddr, port);
-
-
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new ClientConnection(ipAddr,port);
+            }
+        });
     }
+
+
 
 }
